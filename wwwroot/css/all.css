@@ -3516,6 +3516,7 @@
   border-bottom: 10px solid #ffffff;
   color: #ffffff;
   background: #0b0c0c;
+  border-bottom: 10px solid #008938;
 }
 
 @media print {
@@ -3541,7 +3542,7 @@
 
 .govuk-header__container--full-width {
   padding: 0 15px;
-  border-color: #1d70b8;
+  border-color: #008938;
 }
 
 .govuk-header__container--full-width .govuk-header__menu-button {
@@ -3552,7 +3553,7 @@
   position: relative;
   margin-bottom: -10px;
   padding-top: 10px;
-  border-bottom: 10px solid #1d70b8;
+  border-bottom: 10px solid #008938;
 }
 
 .govuk-header__container:after {
