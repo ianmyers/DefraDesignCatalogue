@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="css\" />
     <Folder Include="Pages\Components\" />
     <Folder Include="Pages\Combinations\" />
     <Folder Include="Pages\PageLayouts\" />
@@ -30,9 +31,6 @@
 
   <ItemGroup>
     <None Update="css\all.css">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="css\all.css.map">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
