@@ -1,7 +1,7 @@
 @include govuk-exports("govuk/component/header") {
 
   $govuk-header-background: govuk-colour("black");
-  $govuk-header-border-color: $govuk-brand-colour;
+  $govuk-header-border-color: #008938;
   $govuk-header-border-width: govuk-spacing(2);
   $govuk-header-text: govuk-colour("white");
   $govuk-header-link: govuk-colour("white");
@@ -15,6 +15,7 @@
     border-bottom: govuk-spacing(2) solid govuk-colour("white");
     color: $govuk-header-text;
     background: $govuk-header-background;
+    border-bottom: $govuk-header-border-width solid $govuk-header-border-color;
   }
 
   .govuk-header__container--full-width {
