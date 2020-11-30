@@ -27,4 +27,13 @@
     </None>
     <None Include="wwwroot\css\all.css.map" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Update="css\all.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="css\all.css.map">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
