@@ -10,4 +10,10 @@
     <PackageReference Include="System.Net.Http.Json" Version="5.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Components\" />
+    <Folder Include="Pages\Combinations\" />
+    <Folder Include="Pages\PageLayouts\" />
+    <Folder Include="Pages\Examples\" />
+  </ItemGroup>
 </Project>
