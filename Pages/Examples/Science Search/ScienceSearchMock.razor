@@ -1,0 +1,343 @@
+﻿@page "/ScienceSearchMock"
+
+<div class="govuk-main-wrapper defra-main-wrapper">
+    <section>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+                <div class="govuk-form-group govuk-!-margin-bottom-2">
+                    <div id="SearchTermHint" class="govuk-hint govuk-!-margin-bottom-1">
+                        Search Defra Science and Research Projects
+                    </div>
+                    <h1 class="govuk-label-wrapper">
+                        <label id="ProjectSearch" class="govuk-label govuk-label--l govuk-!-margin-bottom-1" for="SearchTerm">
+                            Project Search
+                        </label>
+                    </h1>
+                    <div class="govuk-grid-row">
+                        <div class="govuk-grid-column-two-thirds filter-search-wrapper">
+                            <input class="govuk-input filter-select-input" aria-describedby="SearchTermHint"
+                                   id="SearchTerm" name="SearchTerm" type="text">
+                            <button class="filter-search-button" aria-label="Seach for Projects Button"></button>
+                        </div>
+                    </div>
+                    <p class="govuk-body govuk-!-margin-top-1">Search term can be a project code, contractor name or a word/phrase to match against project titles and keywords.</p>
+                    <p class="govuk-body govuk-!-margin-bottom-2">
+                        <a href="/searchtips" class="govuk-link">Further "Search Tips" are available here.</a>
+                    </p>
+                </div>
+                <div class="govuk-form-group-last">
+                    <button data-prevent-double-click="true"
+                            class="govuk-button govuk-button--secondary govuk-!-margin-bottom-2" data-module="govuk-button">
+                        Reset Search
+                    </button>
+                </div>
+                <hr class="govuk-section-break govuk-section-break--visible">
+            </div>
+        </div>
+    </section>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <section>
+                <AnchorLink href="#maincontent" class="govuk-skip-link">Skip filters</AnchorLink>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset govuk-!-margin-top-2">
+
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h2 class="govuk-fieldset__heading">
+                                Search Filters
+                            </h2>
+                        </legend>
+
+                        <!-- #region Fields of Study -->
+                        <details id="studyFilterDetails" class="govuk-details filter-govuk-details" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+
+                                <span class="govuk-details__summary-text filter-bold-link">
+                                    Fields of Study
+                                </span>
+                            </summary>
+                            <div class="govuk-details__text filter-nopadding-noborder govuk-!-margin-top-2">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label">
+                                        Filter Fields of Study
+                                        <input class="govuk-input filter-select-input" id="fields-of-study" name="fields-of-study" type="text">
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button class="filter-button-link">Select All</button>
+
+                            <div class="govuk-checkboxes filter-scroller govuk-!-margin-top-2">
+
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input" id='study1")' name='stud1")' type="checkbox" checked="">
+                                    <label class="govuk-label govuk-checkboxes__label" for='study1")'>
+                                        Field of Study
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-2">
+                        </details>
+                        <!-- #endregion -->
+                        <!-- #region Study Theme Filters -->
+
+                        <details id="themesFilterDetails" class="govuk-details filter-govuk-details" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text filter-bold-link">
+                                    Study Themes
+                                </span>
+                            </summary>
+
+                            <div class="govuk-details__text filter-nopadding-noborder govuk-!-margin-top-4">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label">
+                                        Filter Study Themes
+                                        <input class="govuk-input filter-select-input" id="study-theme" name="study-theme" type="text">
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button class="filter-button-link">Select All</button>
+
+                            <div class="govuk-checkboxes filter-scroller govuk-!-margin-top-2">
+
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input"
+                                           id='theme1' name='theme1)' type="checkbox" checked="">
+                                    <label class="govuk-label govuk-checkboxes__label" for='theme1")'>
+                                        This could be a long label with long theme names.
+                                    </label>
+                                </div>
+                            </div>
+                            <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-2">
+                        </details>
+
+                        <!-- #endregion -->
+                        <!-- #region Organisations -->
+                        <details id="orgFilterDetails" class="govuk-details filter-govuk-details" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text filter-bold-link">
+                                    Organisations (filtered)
+                                </span>
+                            </summary>
+
+                            <!-- #region Organisation Filters -->
+                            <div class="govuk-details__text filter-nopadding-noborder govuk-!-margin-top-2">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label">
+                                        Organisation Name
+                                        <input class="govuk-input filter-select-input" id="organisation-name" name="organisation-name" type="text">
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button class="filter-button-link">Clear All</button>
+
+                            <div class="govuk-checkboxes filter-scroller govuk-!-margin-top-2">
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input"
+                                           id='org1' name='org1)' type="checkbox" checked="">
+                                    <label class="govuk-label govuk-checkboxes__label" for='org1'>
+                                        A sample organisation name which can also be quite long
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- #endregion -->
+                            <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-2">
+                        </details>
+                        <!-- #endregion -->
+                        <!-- #region Keyword -->
+                        <details id="keywordFilterDetails" class="govuk-details filter-govuk-details" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text filter-bold-link">
+                                    Keywords
+                                </span>
+                            </summary>
+
+                            <!-- #region Keywords Filters -->
+                            <div class="govuk-details__text filter-nopadding-noborder govuk-!-margin-top-2">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label">
+                                        Keyword
+                                        <input class="govuk-input filter-select-input" id="keyword-name" name="keyword-name" type="text">
+                                    </label>
+                                </div>
+                            </div>
+
+                            <button class="filter-button-link">Select All</button>
+
+                            <div class="govuk-checkboxes filter-scroller govuk-!-margin-top-2">
+
+                                <div class="govuk-checkboxes__item">
+                                    <input class="govuk-checkboxes__input"
+                                           id='key1' name='key1' type="checkbox">
+                                    <label class="govuk-label govuk-checkboxes__label" for='key1'>
+                                        Keyword label
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- #endregion -->
+                            <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-2">
+                        </details>
+                        <!-- #endregion -->
+                        <!-- #region Project Status -->
+                        <details id="statusFilterDetails" class="govuk-details filter-govuk-details" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text filter-bold-link">
+                                    Project Status
+                                </span>
+                            </summary>
+
+                            <!-- #region Fields of Study Filters -->
+                            <div class="govuk-details__text filter-nopadding-noborder govuk-!-margin-top-2">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="projectStatus">
+                                        Project Status
+                                    </label>
+                                    <select class="govuk-select" id="projectStatus" name="projectStatus">
+                                        <option value="All" selected>All</option>
+                                        <option value="Ongoing">Ongoing</option>
+                                        <option value="Completed">Completed</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- #endregion -->
+                            <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-3">
+                        </details>
+                        <!-- #endregion-->
+                        <!-- #region Project Date -->
+                        <details id="dateFilterDetails" class="govuk-details filter-govuk-details" data-module="govuk-details">
+                            <summary class="govuk-details__summary">
+                                <span class="govuk-details__summary-text filter-bold-link">
+                                    Project Dates (filtered)
+                                </span>
+                            </summary>
+                            <!-- #region Fields of Study Filters -->
+                            <div class="govuk-details__text filter-nopadding-noborder govuk-!-margin-top-2">
+                                <fieldset class="govuk-fieldset" role="group" aria-describedby="prject-from-date-hint">
+                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                        <h3 class="govuk-fieldset__heading">
+                                            Include projects from
+                                        </h3>
+                                    </legend>
+                                    <div class="govuk-form-group">
+                                        <div id="prject-from-date-hint" class="govuk-hint filter-heading-m">
+                                            For example, 17 12 2012
+                                        </div>
+                                        <div class="govuk-date-input" id="projects-from">
+                                            <div class="govuk-date-input__item">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label" for="projects-from-date">
+                                                        Projects Starting
+                                                    </label>
+                                                    <input class="govuk-input govuk-date-input__input" id="projects-from-date" name="projects-from-day" type="date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset class="govuk-fieldset govuk-!-margin-top-5" role="group" aria-describedby="prject-to-date-hint">
+                                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                        <h3 class="govuk-fieldset__heading">
+                                            Include projects until
+                                        </h3>
+                                    </legend>
+                                    <div class="govuk-form-group">
+                                        <div id="prject-to-date-hint" class="govuk-hint filter-heading-m">
+                                            For example, 21 06 2018
+                                        </div>
+                                        <div class="govuk-date-input" id="projects-to">
+                                            <div class="govuk-date-input__item">
+                                                <div class="govuk-form-group">
+                                                    <label class="govuk-label govuk-date-input__label" for="projects-to-date">
+                                                        Projects ending
+                                                    </label>
+                                                    <input class="govuk-input govuk-date-input__input" id="projects-to-date" name="projects-to-date" type="date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <!-- #endregion -->
+                            <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-2">
+                        </details>
+                        <!-- #endregion-->
+                    </fieldset>
+                </div>
+            </section>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            <main id="maincontent" name="maincontent" role="main" class="govuk-!-margin-top-2">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                        <h2 class="govuk-fieldset__heading">
+                            Results: 1234 Found
+                        </h2>
+                    </legend>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="sort">
+                            Sort by
+                        </label>
+                        <select class="govuk-select" id="sort" name="sort">
+                            <option value="code" selected>Project Code</option>
+                            <option value="title">Project Title</option>
+                            <option value="cost">Project Cost</option>
+                            <option value="startDate">Project Start Date</option>
+                            <option value="endDate">Project End Date</option>
+                        </select>
+                    </div>
+
+                    <a class="filter-results-link" href="/ProjectDetails/ABCD1">
+                        <p class="govuk-body-l govuk-!-margin-bottom-1">ABCD1 - Project Title Goes Here</p>
+                        @*<p class="govuk-body-m govuk-!-margin-bottom-1">@results.Extract</p>*@
+                        <p class="govuk-body-s govuk-!-margin-bottom-2">Project Start Date - 06 2010, Project End Date - 09 2015, Project Cost £123,456</p>
+                    </a>
+                    <a href="/ProjectDetails/ABCD1" class="govuk-link filter-results-link">Full Project Details <span class="govuk-visually-hidden">for project ABCD1</span></a>
+                    <hr class="govuk-section-break govuk-section-break--visible filter-results-hr govuk-!-margin-top-2 govuk-!-margin-bottom-4">
+                </fieldset>
+            </main>
+            <nav>
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-third govuk-!-margin-bottom-3">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-half govuk-!-margin-bottom-2">
+                                <a href="#" class="govuk-link filter-navigation-link">First Page</a>
+                            </div>
+                            <div class="govuk-grid-column-one-half">
+                                <a href="#" class="govuk-link filter-navigation-link">Prev Page</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="govuk-grid-column-one-third govuk-!-margin-bottom-3">
+                        <a href="#" class="govuk-link filter-navigation-link">1</a>
+                        <a href="#" class="govuk-link filter-navigation-link">2</a>
+                        <a href="#" class="govuk-link filter-navigation-link">3</a>
+                        <a href="#" class="govuk-link filter-navigation-link">4</a>
+                        <a href="#" class="govuk-link filter-navigation-link-selected">5</a>
+                        <a href="#" class="govuk-link filter-navigation-link">6</a>
+                        <a href="#" class="govuk-link filter-navigation-link">7</a>
+                        <a href="#" class="govuk-link filter-navigation-link">8</a>
+                        <a href="#" class="govuk-link filter-navigation-link">9</a>
+                        <a href="#" class="govuk-link filter-navigation-link">10</a>
+                        <p class="govuk-body-s">Page 5 of 123</p>
+                    </div>
+                    <div class="govuk-grid-column-one-third govuk-!-margin-bottom-3">
+                        <div class="govuk-grid-row">
+                            <div class="govuk-grid-column-one-half govuk-!-margin-bottom-2">
+                                <a href="#" class="govuk-link filter-navigation-link">Next Page</a>
+                            </div>
+                            <div class="govuk-grid-column-one-half">
+                                <a href="#" class="govuk-link filter-navigation-link">Last Page</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
