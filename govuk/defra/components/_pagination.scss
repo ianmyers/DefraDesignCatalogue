@@ -44,8 +44,8 @@ ul {
       }
     }
   }
-}
-
-.pagination__summary {
-  @include govuk-visually-hidden;
+  
+  &__summary {
+    @include govuk-visually-hidden;
+  }
 }
