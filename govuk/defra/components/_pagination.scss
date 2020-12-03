@@ -22,25 +22,27 @@ ul {
   }
 
   &__link {
+    @extend %govuk-link;
     display: block;
     padding: 5px 10px;
     text-decoration: none;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       background: #F8F8F8;
       outline: 3px solid #FFBF47;
     }
 
     &.current {
-      color: #0B0C0C;
-      font-weight: 700;
       border: none;
-      pointer-events: none;
+      color: #0B0C0C;
       cursor: default;
+      font-weight: 700;
+      pointer-events: none;
 
       &:hover, &:focus {
-        color: #0B0C0C;
         background: none;
+        color: #0B0C0C;
       }
     }
   }
