@@ -1,4 +1,4 @@
-.govuk-link, .pagination__link {
+.govuk-link {
   font-family: "GDS Transport", arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,12 +23,12 @@
 }
 
 @media print {
-  .govuk-link, .pagination__link {
+  .govuk-link {
     font-family: sans-serif;
   }
 }
 
-.govuk-link:focus, .pagination__link:focus {
+.govuk-link:focus {
   outline: 3px solid transparent;
   color: #0b0c0c;
   background-color: #ffdd00;
@@ -37,28 +37,28 @@
   text-decoration: none;
 }
 
-.govuk-link:link, .pagination__link:link {
+.govuk-link:link {
   color: #1d70b8;
 }
 
-.govuk-link:visited, .pagination__link:visited {
+.govuk-link:visited {
   color: #4c2c92;
 }
 
-.govuk-link:hover, .pagination__link:hover {
+.govuk-link:hover {
   color: #003078;
 }
 
-.govuk-link:active, .pagination__link:active {
+.govuk-link:active {
   color: #0b0c0c;
 }
 
-.govuk-link:focus, .pagination__link:focus {
+.govuk-link:focus {
   color: #0b0c0c;
 }
 
 @media print {
-  .govuk-link[href^="/"]:after, .pagination__link[href^="/"]:after, .govuk-link[href^="http://"]:after, .pagination__link[href^="http://"]:after, .govuk-link[href^="https://"]:after, .pagination__link[href^="https://"]:after {
+  .govuk-link[href^="/"]:after, .govuk-link[href^="http://"]:after, .govuk-link[href^="https://"]:after {
     content: " (" attr(href) ")";
     font-size: 90%;
     word-wrap: break-word;

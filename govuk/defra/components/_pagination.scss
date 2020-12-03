@@ -22,7 +22,6 @@ ul {
   }
 
   &__link {
-    @extend %govuk-link;
     display: block;
     padding: 5px 10px;
     text-decoration: none;
@@ -40,7 +39,8 @@ ul {
       font-weight: 700;
       pointer-events: none;
 
-      &:hover, &:focus {
+      &:hover,
+      &:focus {
         background: none;
         color: #0B0C0C;
       }
